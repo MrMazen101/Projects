@@ -1,0 +1,16 @@
+pandas
+scikit-learn
+spacy
+emoji
+beautifulsoup4
+matplotlib
+seaborn
+joblib
+tqdm
+wordcloud
+fastapi
+uvicorn
+pydantic
+streamlit
+transformers
+torch
