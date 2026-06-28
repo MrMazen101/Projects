@@ -178,17 +178,4 @@ Inside each Tab (via BaseTab):
 └──────────────────────────────────────────────┘
 ```
 
----
 
-## Bug Fix Summary
-
-| # | Bug | File | Fix |
-|---|---|---|---|
-| 1 | GUI freeze — blocking `cv2.waitKey` loop on Qt thread | `Seg.py` | Replaced with `ManualSegDialog(QDialog)` |
-| 2 | QImage memory corruption — numpy buffer freed too early | All modules | `BaseTab._display_buffer` holds reference |
-| 3 | Signal race — slider reset triggers processing before image loads | `Transform.py` | `blockSignals(True/False)` around reset |
-| 4 | Kernel validation logic broken (unreachable inner `if`) | `Denoise.py`, `Morph.py` | `BaseTab.safe_kernel()` |
-| 5 | Edge magnitude clipping — `np.uint8(abs(mag))` clips >255 | `edge.py` | `cv2.normalize(..., NORM_MINMAX, CV_8U)` |
-| 6 | `Qt.KeepAspectRatio` passed as magic number `1` | All modules | Explicit `Qt.KeepAspectRatio` enum |
-| 7 | `cv2.imread` fails silently on non-ASCII paths | `main.py` | `np.fromfile + cv2.imdecode` |
-| 8 | `display_image` duplicated across 5 files | All modules | Centralised in `BaseTab` |
