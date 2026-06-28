@@ -45,8 +45,8 @@ project/
 ### 1. Clone / download the project
 
 ```bash
-git clone https://github.com/your-username/image-processing-tool.git
-cd image-processing-tool
+git clone https://github.com/MrMazen101/Projects/cv/1.git
+cd Projects/cv/1
 ```
 
 ### 2. Create a virtual environment (recommended)
@@ -90,6 +90,8 @@ python main.py
 The two provided noisy images were processed as follows:
 
 ### Image 1 — Minnie Mouse (cartoon, salt-and-pepper noise)
+<img width="388" height="263" alt="Screenshot 2026-06-28 055030" src="https://github.com/user-attachments/assets/19b7176d-7414-435d-a8a9-88c0aafb03fa" />
+
 
 **Denoising → Median Filter (kernel 3×3)**
 
@@ -102,6 +104,8 @@ After denoising, Canny was applied with auto-computed thresholds (based on image
 ---
 
 ### Image 2 — Portrait (grayscale photo, Gaussian noise)
+<img width="284" height="227" alt="image" src="https://github.com/user-attachments/assets/1fb75bbe-091b-43ac-86d4-8208904bc75d" />
+
 
 **Denoising → Gaussian Blur (kernel 5×5, σ=1)**
 
